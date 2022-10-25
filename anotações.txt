@@ -1,0 +1,10 @@
+Fogo movimentando subir/descer e laterais OK
+
+Dragão começando do left 0  e indo até right 0
+
+Data de lançamento, aparecer e desaparecer a cada 5 seg 
+Deixar delay pro dragão vir e quando voltar aparecer a data/vice-versa
+
+
+
+

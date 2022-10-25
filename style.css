@@ -1,0 +1,87 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.scale-in-center {
+	animation: scale-in-center 5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@keyframes scale-in-center {
+    0% {
+      transform: scale(0);
+      opacity: 1;
+    }
+    100% {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+
+  @keyframes vibrate-1 {
+    0% {
+      transform: translate(0);
+    }
+    20% {
+      transform: translate(-6px, 6px);
+    }
+    40% {
+      transform: translate(-6px, -2px);
+    }
+    60% {
+      transform: translate(6px, 6px);
+    }
+    80% {
+      transform: translate(6px, -6px);
+    }
+    100% {
+      transform: translate(0);
+    }
+  }
+
+  @keyframes go-back {
+    from {
+      transform: translateX(100%);
+    }
+    to {
+      transform: translateX(0);
+    }
+  } 
+
+.fundo {
+    display: flex;
+    height: 100vh;
+    position: relative;
+    background-image: url('background.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.dragao {
+    height: 100%;
+    width: 60%;
+    position: absolute;
+    background-image: url('dragao.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    animation: go-back 3s infinite alternate;
+}
+
+.rodape {
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    margin-top: 55px;
+    background-image: url('fogo-rodapé-removebg.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    animation: vibrate-1 1.5s linear infinite both;
+}
